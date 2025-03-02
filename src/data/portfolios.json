@@ -1,0 +1,435 @@
+
+[
+    {
+      "id": "1",
+      "name": "Emma Lindqvist",
+      "classYear": "01",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/emma",
+      "description": "UI/UX designer focused on accessible digital experiences with an emphasis on inclusive design."
+    },
+    {
+      "id": "2",
+      "name": "Marcus Johansson",
+      "classYear": "01",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/marcus",
+      "description": "Frontend developer specializing in React and design systems implementation."
+    },
+    {
+      "id": "3",
+      "name": "Sofia Ahmed",
+      "classYear": "02",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/sofia",
+      "description": "Product designer with a focus on creating meaningful user journeys and experiences."
+    },
+    {
+      "id": "4",
+      "name": "Erik Bergström",
+      "classYear": "02",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/erik",
+      "description": "Full-stack developer with expertise in scalable architecture and performance."
+    },
+    {
+      "id": "5",
+      "name": "Lina Karlsson",
+      "classYear": "03",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/lina",
+      "description": "Interaction designer specializing in motion design and microinteractions."
+    },
+    {
+      "id": "6",
+      "name": "Johan Ek",
+      "classYear": "03",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/johan",
+      "description": "Frontend developer passionate about responsive design and cross-platform compatibility."
+    },
+    {
+      "id": "7",
+      "name": "Mia Nilsson",
+      "classYear": "04",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/mia",
+      "description": "UX researcher and designer with a background in cognitive psychology."
+    },
+    {
+      "id": "8",
+      "name": "Alexander Lindholm",
+      "classYear": "04",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/alexander",
+      "description": "Backend developer focused on secure and efficient API development."
+    },
+    {
+      "id": "9",
+      "name": "Elsa Björk",
+      "classYear": "05",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/elsa",
+      "description": "UI designer with a strong focus on typography and visual hierarchy."
+    },
+    {
+      "id": "10",
+      "name": "Oscar Holm",
+      "classYear": "05",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/oscar",
+      "description": "Mobile app developer with expertise in React Native and Flutter."
+    },
+    {
+      "id": "11",
+      "name": "Hanna Söderberg",
+      "classYear": "06",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/hanna",
+      "description": "Service designer working at the intersection of digital and physical experiences."
+    },
+    {
+      "id": "12",
+      "name": "Felix Nordström",
+      "classYear": "06",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/felix",
+      "description": "Game developer with a passion for interactive storytelling and 3D experiences."
+    },
+    {
+      "id": "13",
+      "name": "Olivia Gustafsson",
+      "classYear": "07",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/olivia",
+      "description": "Digital product designer focusing on sustainable and ethical design practices."
+    },
+    {
+      "id": "14",
+      "name": "William Ekström",
+      "classYear": "07",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/william",
+      "description": "Cloud infrastructure developer with expertise in serverless architectures."
+    },
+    {
+      "id": "15",
+      "name": "Alice Lind",
+      "classYear": "08",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/alice",
+      "description": "Experience designer focused on creating cohesive omnichannel user experiences."
+    },
+    {
+      "id": "16",
+      "name": "Gustav Forsberg",
+      "classYear": "08",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/gustav",
+      "description": "Frontend developer specializing in WebGL and interactive visualizations."
+    },
+    {
+      "id": "17",
+      "name": "Maja Sjöberg",
+      "classYear": "09",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/maja",
+      "description": "UI designer with a background in graphic design and brand identity."
+    },
+    {
+      "id": "18",
+      "name": "Noah Lindgren",
+      "classYear": "09",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/noah",
+      "description": "Blockchain developer exploring decentralized applications and smart contracts."
+    },
+    {
+      "id": "19",
+      "name": "Ebba Nyström",
+      "classYear": "10",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/ebba",
+      "description": "Information architect specializing in complex data visualization and dashboards."
+    },
+    {
+      "id": "20",
+      "name": "Lucas Bergman",
+      "classYear": "10",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/lucas",
+      "description": "IoT developer working on connected home devices and smart environments."
+    },
+    {
+      "id": "21",
+      "name": "Wilma Ek",
+      "classYear": "11",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/wilma",
+      "description": "Accessibility specialist ensuring inclusive design practices across digital products."
+    },
+    {
+      "id": "22",
+      "name": "Elias Sandberg",
+      "classYear": "11",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/elias",
+      "description": "DevOps engineer focused on continuous integration and deployment pipelines."
+    },
+    {
+      "id": "23",
+      "name": "Astrid Björklund",
+      "classYear": "12",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/astrid",
+      "description": "UX writer creating clear, concise, and human-centered microcopy for interfaces."
+    },
+    {
+      "id": "24",
+      "name": "Hugo Persson",
+      "classYear": "12",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/hugo",
+      "description": "Machine learning engineer integrating AI solutions into web applications."
+    },
+    {
+      "id": "25",
+      "name": "Alva Holmberg",
+      "classYear": "13",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/alva",
+      "description": "Motion designer focused on creating engaging animations for digital interfaces."
+    },
+    {
+      "id": "26",
+      "name": "Leo Ekdahl",
+      "classYear": "13",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/leo",
+      "description": "Game developer with a focus on VR/AR experiences and interactive installations."
+    },
+    {
+      "id": "27",
+      "name": "Ella Viklund",
+      "classYear": "14",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/ella",
+      "description": "Service designer creating seamless experiences across digital and physical touchpoints."
+    },
+    {
+      "id": "28",
+      "name": "Isak Lundström",
+      "classYear": "14",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/isak",
+      "description": "Full-stack developer with expertise in real-time applications and WebSockets."
+    },
+    {
+      "id": "29",
+      "name": "Stella Nordin",
+      "classYear": "15",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/stella",
+      "description": "Design researcher focused on ethnographic approaches to understanding user needs."
+    },
+    {
+      "id": "30",
+      "name": "Axel Blom",
+      "classYear": "15",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/axel",
+      "description": "Backend developer specializing in scalable microservices and distributed systems."
+    },
+    {
+      "id": "31",
+      "name": "Selma Åström",
+      "classYear": "16",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/selma",
+      "description": "Interaction designer specializing in gesture-based interfaces and natural interactions."
+    },
+    {
+      "id": "32",
+      "name": "Theo Dahlberg",
+      "classYear": "16",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/theo",
+      "description": "Mobile developer creating cross-platform applications with a focus on performance."
+    },
+    {
+      "id": "33",
+      "name": "Alma Sundberg",
+      "classYear": "17",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/alma",
+      "description": "User experience designer specializing in fintech and complex financial interfaces."
+    },
+    {
+      "id": "34",
+      "name": "Olle Nygren",
+      "classYear": "17",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/olle",
+      "description": "Frontend developer focused on design systems and component libraries."
+    },
+    {
+      "id": "35",
+      "name": "Iris Lundkvist",
+      "classYear": "18",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/iris",
+      "description": "Product designer with expertise in gamification and engaging user experiences."
+    },
+    {
+      "id": "36",
+      "name": "Edvin Malmberg",
+      "classYear": "18",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/edvin",
+      "description": "Security-focused developer implementing robust authentication and authorization systems."
+    },
+    {
+      "id": "37",
+      "name": "Nova Wickman",
+      "classYear": "19",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/nova",
+      "description": "UI designer specialized in dark mode interfaces and color systems."
+    },
+    {
+      "id": "38",
+      "name": "Viggo Hallberg",
+      "classYear": "19",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/viggo",
+      "description": "Performance engineer optimizing web applications for speed and responsiveness."
+    },
+    {
+      "id": "39",
+      "name": "Klara Östlund",
+      "classYear": "20",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/klara",
+      "description": "Experience designer focused on creating emotional connections through digital interfaces."
+    },
+    {
+      "id": "40",
+      "name": "Melvin Sjöholm",
+      "classYear": "20",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/melvin",
+      "description": "System architect designing robust and scalable application infrastructures."
+    },
+    {
+      "id": "41",
+      "name": "Elise Norberg",
+      "classYear": "21",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/elise",
+      "description": "Service designer specializing in healthcare and wellness digital experiences."
+    },
+    {
+      "id": "42",
+      "name": "Walter Bergqvist",
+      "classYear": "21",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/walter",
+      "description": "AR/VR developer building immersive 3D experiences and spatial interfaces."
+    },
+    {
+      "id": "43",
+      "name": "Juni Blomgren",
+      "classYear": "22",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/juni",
+      "description": "Product designer focused on conversational interfaces and voice-based UX."
+    },
+    {
+      "id": "44",
+      "name": "Adrian Löfgren",
+      "classYear": "22",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/adrian",
+      "description": "Backend developer specializing in real-time data processing and analytics."
+    },
+    {
+      "id": "45",
+      "name": "Liv Andersson",
+      "classYear": "23",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/liv",
+      "description": "Interaction designer with a focus on accessibility and universal design principles."
+    },
+    {
+      "id": "46",
+      "name": "Otto Isaksson",
+      "classYear": "23",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/otto",
+      "description": "Frontend developer focused on WebAssembly and high-performance browser applications."
+    },
+    {
+      "id": "47",
+      "name": "Hedda Wallin",
+      "classYear": "24",
+      "role": "Designer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/hedda",
+      "description": "UX designer specializing in educational technology and learning experiences."
+    },
+    {
+      "id": "48",
+      "name": "Einar Höglund",
+      "classYear": "24",
+      "role": "Developer",
+      "imageUrl": "/images/portfolios/placeholder.png",
+      "websiteUrl": "https://example.com/einar",
+      "description": "Full-stack developer with a focus on privacy-preserving technologies and secure data handling."
+    }
+  ]
