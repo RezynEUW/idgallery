@@ -16,10 +16,11 @@ export default function SortingOptions({ value, onChange }: SortingOptionsProps)
         onChange={(e) => onChange(e.target.value)}
         className="appearance-none bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg pl-4 pr-10 py-2 text-gray-700 dark:text-gray-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
       >
-        <option value="newest">Newest First</option>
-        <option value="oldest">Oldest First</option>
-        <option value="nameAZ">Name (A-Z)</option>
-        <option value="nameZA">Name (Z-A)</option>
+        <option value="random">Slumpmässig</option>
+        <option value="newest">Nyast först</option>
+        <option value="oldest">Äldst först</option>
+        <option value="nameAZ">Namn (A-Ö)</option>
+        <option value="nameZA">Namn (Ö-A)</option>
       </select>
       <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
         <ChevronDown className="w-5 h-5 text-gray-400" />

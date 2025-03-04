@@ -24,3 +24,33 @@ body {
 .dark-mode-transition {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Add to globals.css */
+:root {
+  --transition-duration: 0.3s;
+}
+
+body {
+  transition: background-color var(--transition-duration) ease, 
+              color var(--transition-duration) ease;
+}
+
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Add smooth transitions for all elements */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: ease;
+}
+
+/* But exclude transitions for transforms and other animations */
+.transform, .transition, .transition-all, .transition-colors, 
+.transition-opacity, .transition-shadow, .transition-transform {
+  transition-property: initial;
+}

@@ -55,8 +55,8 @@ export default function FeaturedPortfolio({ portfolio }: FeaturedPortfolioProps)
     : 'bg-blue-500/20 text-blue-300 border-blue-500/40';
   
   const buttonClass = portfolio.role === 'Designer'
-    ? 'bg-purple-600 hover:bg-purple-700 focus:ring-purple-500/50'
-    : 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500/50';
+    ? 'bg-purple-600 hover:bg-purple-700'
+    : 'bg-blue-600 hover:bg-blue-700';
 
   return (
     <div 
@@ -75,7 +75,7 @@ export default function FeaturedPortfolio({ portfolio }: FeaturedPortfolioProps)
         ) : (
           <Image 
             src={portfolio.imageUrl} 
-            alt={`${portfolio.name}'s portfolio`} 
+            alt={`${portfolio.name}s portfölj`} 
             fill 
             className={`object-cover transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
             priority
@@ -92,40 +92,42 @@ export default function FeaturedPortfolio({ portfolio }: FeaturedPortfolioProps)
       {/* Content */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full container mx-auto px-6 py-20">
         <div className="content-wrapper md:w-1/2 text-white py-6">
-          <p className={`${accentColor} text-lg font-medium mb-3 tracking-wider uppercase`}>Featured Portfolio</p>
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">{portfolio.name}</h2>
+          <p className={`${accentColor} text-lg font-medium mb-3 tracking-wider uppercase`}>Dagens Portfölj</p>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 font-sans leading-tight">{portfolio.name}</h2>
           <div className="flex items-center space-x-3 mb-8">
             <span className="bg-gray-800/80 text-gray-100 px-4 py-1.5 rounded-full text-sm font-medium border border-gray-700">
               {formatClassId(portfolio.classYear)}
             </span>
             <span className={`px-4 py-1.5 rounded-full text-sm font-medium border ${tagColor}`}>
-              {portfolio.role}
+              {portfolio.role === 'Designer' ? 'Designer' : 'Utvecklare'}
             </span>
           </div>
           <p className="text-gray-300 mb-10 text-lg max-w-lg leading-relaxed">{portfolio.description}</p>
+          
+          {/* Simplified button */}
           <a 
             href={portfolio.websiteUrl} 
             target="_blank" 
             rel="noopener noreferrer"
-            className={`${buttonClass} transition-all text-white px-8 py-4 rounded-lg text-lg font-medium inline-flex items-center gap-2 shadow-xl hover:shadow-2xl hover:-translate-y-1 transform focus:outline-none focus:ring-4`}
+            className={`${buttonClass} text-white px-8 py-4 rounded-lg text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2`}
           >
-            View Portfolio <ExternalLink size={20} />
+            Visa Portfölj <ExternalLink size={20} />
           </a>
         </div>
         
-        <div className="image-wrapper md:w-1/2 p-6 hidden md:block">
+        <div className="image-wrapper w-full md:w-1/2 p-6 mt-8 md:mt-0 block">
           <div className="rounded-xl shadow-2xl overflow-hidden border border-gray-700/50 transform hover:-rotate-1 transition-all duration-300 backdrop-blur-sm bg-gray-900/30">
             {imageError ? (
               <div className="w-full h-80 flex items-center justify-center text-white bg-gray-800">
                 <div className="text-center p-4">
                   <div className="text-2xl font-bold">{portfolio.name}</div>
-                  <div className="text-lg opacity-80">{portfolio.role}</div>
+                  <div className="text-lg opacity-80">{portfolio.role === 'Designer' ? 'Designer' : 'Utvecklare'}</div>
                 </div>
               </div>
             ) : (
               <Image 
                 src={portfolio.imageUrl} 
-                alt={`${portfolio.name}'s portfolio screenshot`} 
+                alt={`${portfolio.name}s portföljskärmbild`} 
                 width={650} 
                 height={400}
                 className="object-cover w-full h-auto"
@@ -134,6 +136,18 @@ export default function FeaturedPortfolio({ portfolio }: FeaturedPortfolioProps)
             )}
           </div>
         </div>
+      </div>
+      
+      {/* Section transition with wave */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" className="w-full h-auto transform translate-y-[1px]">
+          <path 
+            fill="#f9fafb" 
+            fillOpacity="1" 
+            d="M0,96L48,85.3C96,75,192,53,288,53.3C384,53,480,75,576,90.7C672,107,768,117,864,106.7C960,96,1056,64,1152,58.7C1248,53,1344,75,1392,85.3L1440,96L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
+            className="dark:fill-gray-900 fill-gray-50"
+          ></path>
+        </svg>
       </div>
     </div>
   );

@@ -14,14 +14,24 @@ interface PortfolioGridProps {
   featuredId?: string;
 }
 
-type SortOption = 'newest' | 'oldest' | 'nameAZ' | 'nameZA';
+type SortOption = 'random' | 'newest' | 'oldest' | 'nameAZ' | 'nameZA';
+
+// Fisher-Yates shuffle algorithm for random sort
+function shuffleArray<T>(array: T[]): T[] {
+  const newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+}
 
 export default function PortfolioGrid({ portfolios, featuredId }: PortfolioGridProps) {
   const [filteredPortfolios, setFilteredPortfolios] = useState<Portfolio[]>([]);
   const [classFilter, setClassFilter] = useState<string>('all');
   const [roleFilter, setRoleFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [sortOption, setSortOption] = useState<SortOption>('newest');
+  const [sortOption, setSortOption] = useState<SortOption>('random');
   
   // Apply filters and sorting
   useEffect(() => {
@@ -53,6 +63,9 @@ export default function PortfolioGrid({ portfolios, featuredId }: PortfolioGridP
     
     // Apply sorting
     switch (sortOption) {
+      case 'random':
+        results = shuffleArray(results);
+        break;
       case 'newest':
         results = [...results].sort((a, b) => parseInt(b.classYear) - parseInt(a.classYear));
         break;
@@ -74,7 +87,7 @@ export default function PortfolioGrid({ portfolios, featuredId }: PortfolioGridP
   
   return (
     <div className="container mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Student Portfolios</h2>
+      <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Studentportföljer</h2>
       
       {/* Filters and search row */}
       <div className="flex flex-col md:flex-row gap-4 mb-8">
@@ -90,7 +103,7 @@ export default function PortfolioGrid({ portfolios, featuredId }: PortfolioGridP
       
       {/* Portfolio grid */}
       {filteredPortfolios.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
           {filteredPortfolios.map((portfolio, index) => (
             <div key={portfolio.id}>
               <PortfolioCard 
@@ -103,7 +116,7 @@ export default function PortfolioGrid({ portfolios, featuredId }: PortfolioGridP
       ) : (
         <div className="text-center py-12">
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            No portfolios found matching your criteria.
+            Inga portföljer hittades som matchar dina kriterier.
           </p>
         </div>
       )}
