@@ -1,10 +1,11 @@
-// src/app/_components/DarkModeToggle.tsx
+// src/app/_components/Navbar.tsx
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, Mail } from 'lucide-react';
 
-export default function DarkModeToggle() {
+export default function Navbar() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
   
   // Check for dark mode preference on mount
@@ -48,15 +49,44 @@ export default function DarkModeToggle() {
   };
   
   return (
-    <button 
-      onClick={toggleDarkMode}
-      className="fixed top-4 right-4 z-50 p-2 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-shadow"
-      aria-label="Toggle dark mode"
-    >
-      {isDarkMode ? 
-        <Sun className="w-5 h-5 text-amber-500" /> : 
-        <Moon className="w-5 h-5 text-gray-700" />
-      }
-    </button>
+    <nav className="fixed top-0 left-0 right-0 z-50">
+      {/* Super glassy background with intense blur and subtle border */}
+      <div className="absolute inset-0 backdrop-blur-xl bg-white/5 dark:bg-gray-900/25 border-b border-white/20 dark:border-gray-800/30"></div>
+      
+      {/* Content container */}
+      <div className="container relative z-10 mx-auto px-4">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo space */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="font-bold text-xl text-gray-900 dark:text-white">
+              ID Portfolio
+            </Link>
+          </div>
+          
+          {/* Right side navigation */}
+          <div className="flex items-center space-x-6">
+            <Link 
+              href="/kontakt" 
+              className="text-black rounded-full shadow-lg p-2.5 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white flex items-center transition-colors"
+            >
+              <Mail className="w-4 h-4 mr-1" />
+              <span>Kontakt</span>
+            </Link>
+            
+            {/* Ultra glassy button for dark mode toggle */}
+            <button 
+              onClick={toggleDarkMode}
+              className="p-2.5 rounded-full backdrop-blur-md transition-all duration-300 shadow-lg"
+              aria-label="Toggle dark mode"
+            >
+              {isDarkMode ? 
+                <Sun className="w-5 h-5 text-amber-500" /> : 
+                <Moon className="w-5 h-5 text-indigo-50 dark:text-indigo-400" />
+              }
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 }

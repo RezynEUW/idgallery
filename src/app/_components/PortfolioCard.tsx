@@ -40,7 +40,7 @@ export default function PortfolioCard({ portfolio, index }: PortfolioCardProps) 
       {/* Card */}
       <div 
         className={`
-          group relative overflow-hidden rounded-2xl 
+          group relative overflow-hidden rounded-md 
           bg-white dark:bg-gray-800 
           shadow-lg hover:shadow-xl 
           transition-all duration-300 
@@ -94,7 +94,7 @@ export default function PortfolioCard({ portfolio, index }: PortfolioCardProps) 
       </div>
 
       {/* Info section completely outside of the card */}
-      <div className="flex items-center justify-between px-1">
+      <div className="flex items-center justify-between py-1 px-1">
         {/* Class Year pill */}
         <span className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-xs font-medium">
           {formatClassId(portfolio.classYear)}

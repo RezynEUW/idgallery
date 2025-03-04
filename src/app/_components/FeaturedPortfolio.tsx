@@ -54,14 +54,14 @@ export default function FeaturedPortfolio({ portfolio }: FeaturedPortfolioProps)
     ? 'bg-purple-500/20 text-purple-300 border-purple-500/40' 
     : 'bg-blue-500/20 text-blue-300 border-blue-500/40';
   
-  const buttonClass = portfolio.role === 'Designer'
-    ? 'bg-purple-600 hover:bg-purple-700'
-    : 'bg-blue-600 hover:bg-blue-700';
+  const buttonColors = portfolio.role === 'Designer'
+    ? 'bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700'
+    : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700';
 
   return (
     <div 
       ref={containerRef}
-      className={`relative w-full min-h-[600px] bg-gradient-to-br ${gradientColors} overflow-hidden`}
+      className={`relative w-full min-h-[700px] py-30 bg-gradient-to-br ${gradientColors} overflow-hidden`}
     >
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -90,7 +90,7 @@ export default function FeaturedPortfolio({ portfolio }: FeaturedPortfolioProps)
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/80 to-gray-900/70"></div>
       
       {/* Content */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full container mx-auto px-6 py-20">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full container mx-auto px-6 py-24">
         <div className="content-wrapper md:w-1/2 text-white py-6">
           <p className={`${accentColor} text-lg font-medium mb-3 tracking-wider uppercase`}>Dagens Portfölj</p>
           <h2 className="text-5xl md:text-6xl font-bold mb-6 font-sans leading-tight">{portfolio.name}</h2>
@@ -104,19 +104,26 @@ export default function FeaturedPortfolio({ portfolio }: FeaturedPortfolioProps)
           </div>
           <p className="text-gray-300 mb-10 text-lg max-w-lg leading-relaxed">{portfolio.description}</p>
           
-          {/* Simplified button */}
+          {/* Improved button with gradient and no movement */}
           <a 
             href={portfolio.websiteUrl} 
             target="_blank" 
             rel="noopener noreferrer"
-            className={`${buttonClass} text-white px-8 py-4 rounded-lg text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2`}
+            className={`
+              ${buttonColors} text-white px-8 py-4 rounded-sm text-lg font-medium 
+              shadow-lg hover:shadow-xl transition-all duration-300 
+              inline-flex items-center gap-2 relative overflow-hidden group
+            `}
           >
-            Visa Portfölj <ExternalLink size={20} />
+            <span className="relative z-10 flex items-center gap-2">
+              Besök <ExternalLink size={20} />
+            </span>
+            <span className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </a>
         </div>
         
         <div className="image-wrapper w-full md:w-1/2 p-6 mt-8 md:mt-0 block">
-          <div className="rounded-xl shadow-2xl overflow-hidden border border-gray-700/50 transform hover:-rotate-1 transition-all duration-300 backdrop-blur-sm bg-gray-900/30">
+          <div className="rounded-md shadow-2xl overflow-hidden border border-gray-700/50 transform hover:-rotate-1 transition-all duration-300 backdrop-blur-sm bg-gray-900/30">
             {imageError ? (
               <div className="w-full h-80 flex items-center justify-center text-white bg-gray-800">
                 <div className="text-center p-4">
