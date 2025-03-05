@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -18,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ID Portfolio Gallery",
   description: "Portfolio gallery for Civilingenjör Interaktion och Design students",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
