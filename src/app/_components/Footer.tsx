@@ -53,7 +53,7 @@ export default function Footer() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Första raden med tre kolumner */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12 mb-12">
           {/* Om oss - Första kolumn */}
           <div className="flex flex-col">
             <h3 className="text-xl font-bold mb-4 flex items-center">
@@ -89,87 +89,105 @@ export default function Footer() {
             </button>
           </div>
           
-          {/* Tredje kolumn - Förklaringar av roller */}
+          {/* Tredje kolumn - Kompaktare rollförklaringar med t.ex. */}
           <div className="flex flex-col">
             <h3 className="text-xl font-bold mb-4 flex items-center">
               <PenTool className="w-5 h-5 mr-2 text-purple-500" />
-              Våra Roller
+              Kategorier
             </h3>
-            <div className="space-y-4">
-              <div className={`p-3 rounded-lg ${isDarkMode ? 'bg-gray-800/50' : 'bg-gray-100'}`}>
-                <div className="flex items-center mb-1">
-                  <Palette className={`w-4 h-4 mr-2 ${isDarkMode ? 'text-green-400' : 'text-green-600'}`} />
-                  <p className="font-medium">Designer</p>
+            <div className="grid grid-cols-1 gap-2">
+              {/* Designer - kompakt version med t.ex. */}
+              <div className={`px-3 py-1.5 rounded-md ${isDarkMode ? 'bg-gray-800/60 hover:bg-gray-800/80' : 'bg-gray-100 hover:bg-gray-200/70'} flex items-center group transition-colors duration-300`}>
+                <Palette className={`w-4 h-4 mr-2 flex-shrink-0 ${isDarkMode ? 'text-green-400' : 'text-green-600'} group-hover:scale-110 transition-transform duration-300`} />
+                <div className="min-w-0">
+                  <p className="font-medium text-sm leading-none mb-0.5">Designer</p>
+                  <p className={`text-xs truncate ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                    Ex. UX/UI, interaktionsdesign
+                  </p>
                 </div>
-                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  UX/UI, interaktionsdesign, visuell design och användarforskning.
-                </p>
               </div>
 
-              <div className={`p-3 rounded-lg ${isDarkMode ? 'bg-gray-800/50' : 'bg-gray-100'}`}>
-                <div className="flex items-center mb-1">
-                  <Code className={`w-4 h-4 mr-2 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`} />
-                  <p className="font-medium">Utvecklare</p>
+              {/* Utvecklare - kompakt version med t.ex. */}
+              <div className={`px-3 py-1.5 rounded-md ${isDarkMode ? 'bg-gray-800/60 hover:bg-gray-800/80' : 'bg-gray-100 hover:bg-gray-200/70'} flex items-center group transition-colors duration-300`}>
+                <Code className={`w-4 h-4 mr-2 flex-shrink-0 ${isDarkMode ? 'text-blue-400' : 'text-blue-600'} group-hover:scale-110 transition-transform duration-300`} />
+                <div className="min-w-0">
+                  <p className="font-medium text-sm leading-none mb-0.5">Utvecklare</p>
+                  <p className={`text-xs truncate ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                    Ex. frontend, backend, fullstack
+                  </p>
                 </div>
-                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Frontend, backend, fullstack och mobilutveckling.
-                </p>
               </div>
 
-              <div className={`p-3 rounded-lg ${isDarkMode ? 'bg-gray-800/50' : 'bg-gray-100'}`}>
-                <div className="flex items-center mb-1">
-                  <Server className={`w-4 h-4 mr-2 ${isDarkMode ? 'text-purple-400' : 'text-purple-600'}`} />
-                  <p className="font-medium">Annat</p>
+              {/* Annat - kompakt version med t.ex. */}
+              <div className={`px-3 py-1.5 rounded-md ${isDarkMode ? 'bg-gray-800/60 hover:bg-gray-800/80' : 'bg-gray-100 hover:bg-gray-200/70'} flex items-center group transition-colors duration-300`}>
+                <Server className={`w-4 h-4 mr-2 flex-shrink-0 ${isDarkMode ? 'text-purple-400' : 'text-purple-600'} group-hover:scale-110 transition-transform duration-300`} />
+                <div className="min-w-0">
+                  <p className="font-medium text-sm leading-none mb-0.5">Annat</p>
+                  <p className={`text-xs truncate ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                    Ex. UX-research, projektledning
+                  </p>
                 </div>
-                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Projektledning, UX-research, strategisk design och specialister.
-                </p>
               </div>
             </div>
           </div>
         </div>
         
-        {/* Andra raden med jämnt fördelade kolumner */}
-        <div className={`pt-8 border-t ${isDarkMode ? 'border-gray-800' : 'border-gray-200'}`}>
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+        {/* Andra raden med jämnt fördelade kolumner - förbättrad för mobil */}
+        <div className={`pt-6 border-t ${isDarkMode ? 'border-gray-800' : 'border-gray-200'}`}>
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-0">
             {/* Kontakt - vänstercentrerad */}
-            <div>
-              <h4 className={`text-sm font-medium mb-3 ${isDarkMode ? 'text-gray-500' : 'text-gray-500'}`}>KONTAKT</h4>
+            <div className="col-span-1">
+              <h4 className={`text-xs font-medium mb-3 uppercase tracking-wider ${isDarkMode ? 'text-gray-500' : 'text-gray-500'}`}></h4>
               <div className="flex items-center space-x-3">
                 <a 
                   href="https://linkedin.com" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${isDarkMode ? 'bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700' : 'bg-gray-200 text-gray-600 hover:text-gray-900 hover:bg-gray-300'} transition-all duration-300 p-2 rounded-full`}
+                  className={`${isDarkMode ? 'bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700' : 'bg-gray-200 text-gray-600 hover:text-gray-900 hover:bg-gray-300'} transition-all duration-300 p-2 rounded-full flex items-center justify-center`}
                   aria-label="LinkedIn"
                 >
-                  <Linkedin size={20} />
+                  <Linkedin size={18} />
                 </a>
                 <a 
                   href="https://lukashedstrom.com" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${isDarkMode ? 'bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700' : 'bg-gray-200 text-gray-600 hover:text-gray-900 hover:bg-gray-300'} transition-all duration-300 p-2 rounded-full`}
+                  className={`${isDarkMode ? 'bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700' : 'bg-gray-200 text-gray-600 hover:text-gray-900 hover:bg-gray-300'} transition-all duration-300 p-2 rounded-full flex items-center justify-center`}
                   aria-label="Website"
                 >
-                  <Globe size={20} />
+                  <Globe size={18} />
                 </a>
               </div>
             </div>
 
             {/* Teknikstack - högercentrerad */}
-            <div className="text-right">
-              <h4 className={`text-sm font-medium mb-3 ${isDarkMode ? 'text-gray-500' : 'text-gray-500'}`}>BYGGD MED</h4>
-              <div className="flex flex-wrap gap-2 justify-end">
-                <span className={`px-3 py-1 text-xs font-medium rounded-full ${isDarkMode ? 'bg-gray-800 text-gray-300' : 'bg-gray-200 text-gray-700'} flex items-center`}>
+            <div className="col-span-1 text-right">
+              <h4 className={`text-xs font-medium mb-3 uppercase tracking-wider ${isDarkMode ? 'text-gray-500' : 'text-gray-500'}`}></h4>
+              <div className="flex flex-wrap gap-1.5 justify-end">
+                <a 
+                  href="https://nextjs.org" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`px-2.5 py-1 text-xs font-medium rounded-full ${isDarkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'} transition-colors duration-300`}
+                >
                   Next.js 15
-                </span>
-                <span className={`px-3 py-1 text-xs font-medium rounded-full ${isDarkMode ? 'bg-gray-800 text-gray-300' : 'bg-gray-200 text-gray-700'}`}>
-                  Tailwind CSS
-                </span>
-                <span className={`px-3 py-1 text-xs font-medium rounded-full ${isDarkMode ? 'bg-gray-800 text-gray-300' : 'bg-gray-200 text-gray-700'}`}>
-                  TypeScript
-                </span>
+                </a>
+                <a 
+                  href="https://tailwindcss.com" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`px-2.5 py-1 text-xs font-medium rounded-full ${isDarkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'} transition-colors duration-300`}
+                >
+                  Tailwind
+                </a>
+                <a 
+                  href="https://www.typescriptlang.org" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`px-2.5 py-1 text-xs font-medium rounded-full ${isDarkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'} transition-colors duration-300`}
+                >
+                  TS
+                </a>
               </div>
             </div>
           </div>
